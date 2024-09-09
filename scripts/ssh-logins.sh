@@ -8,6 +8,9 @@
 # https://docs.ntfy.sh/examples/#ssh-login-alerts
 #
 # replace https://url/message?token=slay as needed - URL with your reverse proxied gotify site (https://gotify.net/docs/caddy), token with your app token after you've created it in the web UI for apps (https://gotify.net/docs/pushmsg)
+#
+#
+# you can do this from multiple machines and direct it to the machine running gotify - just use different applications and subsequently their tokens, and make sure to edit the pam.d/sshd file as noted above
 
 if [ "${PAM_TYPE}" = "open_session" ]; then
 
